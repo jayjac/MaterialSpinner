@@ -12,7 +12,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let materialSpinner = MaterialSpinner(frame: CGRect.init(x: 50, y: 50, width: 30, height: 30), strokeColor: UIColor.orange)
+        view.addSubview(materialSpinner)
     }
 
     override func didReceiveMemoryWarning() {
