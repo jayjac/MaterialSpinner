@@ -162,6 +162,7 @@ class MaterialSpinner: UIView, CAAnimationDelegate {
         animation.keyPath = "strokeStart"
         animation.toValue = CGFloat(totalNumberOfCircleDivisions - 2) / CGFloat(totalNumberOfCircleDivisions)
         animation.beginTime = CACurrentMediaTime() + stretchingDuration + 0.2
+        
         animation.delegate = self
         subLayer.add(animation, forKey: "retracting")
     }
