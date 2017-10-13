@@ -20,7 +20,7 @@ class MaterialSpinner: UIView, CAAnimationDelegate {
     private var circleOffset: CGFloat {
         return CGFloat(currentDivisionInCircle) / CGFloat(totalNumberOfCircleDivisions)
     }
-    private let stretchingDuration: CFTimeInterval = 0.7
+    private let stretchingDuration: CFTimeInterval = 0.6
     private let rotationDuration: CFTimeInterval = 2.3
     
     private var strokeColors: [UIColor]?
@@ -161,7 +161,7 @@ class MaterialSpinner: UIView, CAAnimationDelegate {
         
         animation.keyPath = "strokeStart"
         animation.toValue = CGFloat(totalNumberOfCircleDivisions - 2) / CGFloat(totalNumberOfCircleDivisions)
-        animation.beginTime = CACurrentMediaTime() + stretchingDuration + 0.1
+        animation.beginTime = CACurrentMediaTime() + stretchingDuration + 0.2
         animation.delegate = self
         subLayer.add(animation, forKey: "retracting")
     }
